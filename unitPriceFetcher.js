@@ -1,4 +1,11 @@
 var UnitPriceParser = require('./unitPriceParser')
+
+/**
+ * Provides an object with properties named for each of given dates, with unit prices for that date as values.
+ * @param apiKey key to use calling BNZ's Fund Unit Prices API
+ * @param dates array of dates (yyyy-mm-dd or milliseconds) unit prices are wanted for
+ * @param callback function to invoke when prices have been obtained for all dates
+ */
 exports.getUnitPricesForDates = function (apiKey, dates, callback) {
   var promises = []
   var results = {}

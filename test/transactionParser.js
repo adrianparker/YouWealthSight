@@ -61,4 +61,30 @@ describe('TransactionParser', function () {
       assert.strictEqual(TransactionParser.getTransactionAmount(sampleTransaction), '0.11')
     })
   })
+  describe('#getFundCodeFor', function () {
+    it('should return null for null fundDescription', function () {
+      assert.strictEqual(TransactionParser.getFundCodeFor(null), null)
+    })
+    it('should return null for blank fundDescription', function () {
+      assert.strictEqual(TransactionParser.getFundCodeFor(''), null)
+    })
+    it('should return null for irrelevant fundDescription', function () {
+      assert.strictEqual(TransactionParser.getFundCodeFor('irrelevant fundDescription'), null)
+    })
+    it('should return BNZ2112007 for Balanced Fund', function () {
+      assert.strictEqual('BNZ2112007', TransactionParser.getFundCodeFor('Balanced Fund'))
+    })
+    it('should return BNZ2112008 for Growth Fund', function () {
+      assert.strictEqual('BNZ2112008', TransactionParser.getFundCodeFor('Growth Fund'))
+    })
+    it('should return BNZ2112009 for Balanced Growth Fund', function () {
+      assert.strictEqual('BNZ2112009', TransactionParser.getFundCodeFor('Balanced Growth Fund'))
+    })
+    it('should return BNZ2112010 for Moderate Fund', function () {
+      assert.strictEqual('BNZ2112010', TransactionParser.getFundCodeFor('Moderate Fund'))
+    })
+    it('should return BNZ2112011 for Income Fund', function () {
+      assert.strictEqual('BNZ2112011', TransactionParser.getFundCodeFor('Income Fund'))
+    })
+  })
 })

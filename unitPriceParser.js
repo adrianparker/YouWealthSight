@@ -1,13 +1,6 @@
 var RestClient = require('node-rest-client').Client
 
 /*
-Fund BNZ2112007 Balanced Fund
-Fund BNZ2112008 Growth Fund
-Fund BNZ2112009 Balanced Growth Fund
-Fund BNZ2112010 Moderate Fund
-Fund BNZ2112011 Income Fund
-*/
-/*
 Inception: as at 2018-05-21
 Fund BNZ2112007 : BUY 1.001300 : SELL 0.998900
 Fund BNZ2112008 : BUY 1.001400 : SELL 0.998900

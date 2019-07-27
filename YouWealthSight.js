@@ -91,6 +91,15 @@ function processTransactionsIntoSharesight (unitPrices) {
     // then get user to specify which portfolio to create YouWealth in
     // in batches of 500 max
     // create a trade for each transaction, using transaction id as unique_identifier, fundCode as symbol, OTHER as market
+    var trades = []
+    postedTransactions.forEach(element => {
+      trades.push({
+        'transaction_id': TransactionParser.getTransactionId(element),
+        'fundCode': TransactionParser.getFundCodeFor(TransactionParser.getTransactionFund(element)),
+        'market': 'OTHER'
+      })
+    })
+    console.log('Processed trade count ' + trades.length)
   } else {
     console.log('Cannot process transactions, no unit prices available')
     process.exit(1)

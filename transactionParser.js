@@ -24,6 +24,30 @@ exports.getTransactionId = function (transaction) {
 exports.getTransactionFund = function (transaction) {
   return transaction.thisAccount.details.particulars
 }
+/*
+Fund BNZ2112007 Balanced Fund
+Fund BNZ2112008 Growth Fund
+Fund BNZ2112009 Balanced Growth Fund
+Fund BNZ2112010 Moderate Fund
+Fund BNZ2112011 Income Fund
+*/
+exports.getFundCodeFor = function (fundDescription) {
+  switch (fundDescription) {
+    case 'Balanced Fund':
+      return 'BNZ2112007'
+    case 'Growth Fund':
+      return 'BNZ2112008'
+    case 'Balanced Growth Fund':
+      return 'BNZ2112009'
+    case 'Moderate Fund':
+      return 'BNZ2112010'
+    case 'Income Fund':
+      return 'BNZ2112011'
+    default:
+      console.error('Unknown fund description: ' + fundDescription)
+      return null
+  }
+}
 exports.getTransactionAmount = function (transaction) {
   return transaction.value.amount
 }
