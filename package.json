@@ -1,7 +1,7 @@
 {
   "name": "youwealth-sight",
-  "description": "Update BNZ YouWealth managed fund prices in a Sharesight portfolio.",
-  "version": "0.0.3",
+  "description": "Create BNZ YouWealth managed fund transactions in a Sharesight portfolio.",
+  "version": "0.0.4",
   "homepage": "https://github.com/adrianparker/YouWealthSight",
   "author": "Adrian Parker <adrian@iceknife.com>",
   "keywords": [
@@ -13,6 +13,7 @@
   ],
   "dependencies": {
     "argv": "0.0.2",
+    "lodash": "^4.17.15",
     "node-rest-client": "^3.1.0",
     "request": "^2.88.0"
   },
@@ -32,9 +33,9 @@
     "debug": ">=2.6.9",
     "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-node": "^9.1.0",
-    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "mocha": "^6.2.0"
   },
