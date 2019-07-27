@@ -1,0 +1,29 @@
+{
+    "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H74MJ0CPD60RL8C1G78O30EHG60N30C1GFGMJ2D1K70SJGC1J70ONS",
+    "otherAccount": {
+        "details": {
+            "code": "",
+            "particulars": "",
+            "reference": ""
+        },
+        "holder": {}
+    },
+    "status": {
+        "code": "POSTED"
+    },
+    "thisAccount": {
+        "accountHash": "account-id-1",
+        "details": {
+            "particulars": "Growth Fund"
+        }
+    },
+    "timestamp": "2019-03-07T00:00:00.000000",
+    "type": {
+        "code": "FERE",
+        "description": "Bonus Payment"
+    },
+    "value": {
+        "amount": "0.11",
+        "currency": "NZD"
+    }
+}

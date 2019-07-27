@@ -1,0 +1,44 @@
+{
+  "name": "youwealth-sight",
+  "description": "Update BNZ YouWealth managed fund prices in a Sharesight portfolio.",
+  "version": "0.0.3",
+  "homepage": "https://github.com/adrianparker/YouWealthSight",
+  "author": "Adrian Parker <adrian@iceknife.com>",
+  "keywords": [
+    "BNZ",
+    "ShareSight",
+    "YouWealth",
+    "new-zealand",
+    "managed-fund"
+  ],
+  "dependencies": {
+    "argv": "0.0.2",
+    "node-rest-client": "^3.1.0",
+    "request": "^2.88.0"
+  },
+  "bugs": {
+    "url": "https://github.com/adrianparker/YouWealthSight/issues"
+  },
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/adrianparker/YouWealthSight.git"
+  },
+  "main": "YouWealthSight.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "debug": ">=2.6.9",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "mocha": "^6.2.0"
+  },
+  "directories": {
+    "test": "test"
+  }
+}

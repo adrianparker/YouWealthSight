@@ -1,0 +1,1001 @@
+{
+    "_links": {
+        "first": {
+            "href": "/transactions?account=account-id-1&from=2016-06-14&to=2019-06-15&offset=0&limit=100"
+        },
+        "last": {
+            "href": "/transactions?account=account-id-1&from=2016-06-14&to=2019-06-15&offset=0&limit=100"
+        },
+        "self": {
+            "href": "/transactions?account=account-id-1&from=2016-06-14&to=2019-06-15&offset=0&limit=100"
+        }
+    },
+    "transactions": [
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H74MJ0DHD64O58C1G78O30EHG60N30C1GFGMJ2C1P6KRJCC9N6OSNS",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2019-06-10T00:00:00.000000",
+            "type": {
+                "code": "FERE",
+                "description": "Bonus Payment"
+            },
+            "value": {
+                "amount": "0.13",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H74MJ0D9D60RL8C1G78O30EHG60N30C1GFGOJGC1N64QJ0E9N71V0",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2019-05-07T00:00:00.000000",
+            "type": {
+                "code": "FERE",
+                "description": "Bonus Payment"
+            },
+            "value": {
+                "amount": "0.13",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H74MJ0D1D60S58C1G78O30EHG60N30C1GFGMJ4D9H60R32E9P65V0",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2019-04-08T00:00:00.000000",
+            "type": {
+                "code": "FERE",
+                "description": "Bonus Payment"
+            },
+            "value": {
+                "amount": "0.13",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H74MJ0D1D60S58C1G78O30EHG60N30C1GFGOJID9J6CSJGDPG69V0",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2019-04-08T00:00:00.000000",
+            "type": {
+                "code": "MELS",
+                "description": "Investment"
+            },
+            "value": {
+                "amount": "4.45",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H74MJ0D1D60P58C1G78O30EHG60N30C1GFGMJ4E9L70P3GC1O61V0",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2019-04-02T00:00:00.000000",
+            "type": {
+                "code": "PIET",
+                "description": "PIE Tax"
+            },
+            "value": {
+                "amount": "-6.97",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H74MJ0CPD64QL8C1G78O30EHG60N30C1GFGOJCDPP6OPJ6E9H75V0",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2019-03-15T00:00:00.000000",
+            "type": {
+                "code": "MELS",
+                "description": "Investment"
+            },
+            "value": {
+                "amount": "100.00",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H74MJ0CPD60RL8C1G78O30EHG60N30C1GFGMJ2D1K70SJGC1J70ONS",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2019-03-07T00:00:00.000000",
+            "type": {
+                "code": "FERE",
+                "description": "Bonus Payment"
+            },
+            "value": {
+                "amount": "0.11",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H74MJ0CHD60S58C1G78O30EHG60N30C1GFGMJ2E9O6CS3ICHO74PNS",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2019-02-08T00:00:00.000000",
+            "type": {
+                "code": "FERE",
+                "description": "Bonus Payment"
+            },
+            "value": {
+                "amount": "0.11",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H74MJ0C9D68PL8C1G78O30EHG60N30C1GFGMJGD9M6OS3ECPN69V0",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2019-01-23T00:00:00.000000",
+            "type": {
+                "code": "MELS",
+                "description": "Investment"
+            },
+            "value": {
+                "amount": "19.99",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H74MJ0C9D60SL8C1G78O30EHG60N30C1GFGMJ4C1K64RJCC1K6ORNS",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2019-01-09T00:00:00.000000",
+            "type": {
+                "code": "FERE",
+                "description": "Bonus Payment"
+            },
+            "value": {
+                "amount": "0.10",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H74MJ0C9D60SL8C1G78O30EHG60N30C1GFGQJIC9G6GS3GDRU",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2019-01-09T00:00:00.000000",
+            "type": {
+                "code": "MELS",
+                "description": "Investment"
+            },
+            "value": {
+                "amount": "100.00",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H70MJ2CHD64SL8C1G78O30EHG60N30C1GFGMJIDPP68RJ8CHK65V0",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2018-12-19T00:00:00.000000",
+            "type": {
+                "code": "MELS",
+                "description": "Investment"
+            },
+            "value": {
+                "amount": "50.87",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H70MJ2CHD64RL8C1G78O30EHG60N30C1GFGOJ6D1G6SP3CCHK75V0",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2018-12-17T00:00:00.000000",
+            "type": {
+                "code": "MELS",
+                "description": "Investment"
+            },
+            "value": {
+                "amount": "44.18",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H70MJ2CHD60RL8C1G78O30EHG60N30C1GFGRJIC1I64RJ6DPHFO",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2018-12-07T00:00:00.000000",
+            "type": {
+                "code": "FERE",
+                "description": "Bonus Payment"
+            },
+            "value": {
+                "amount": "0.09",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H70MJ2C9D68SL8C1G78O30EHG60N30C1GFGOJGDPN6OP36DPG75V0",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2018-11-29T00:00:00.000000",
+            "type": {
+                "code": "MELS",
+                "description": "Investment"
+            },
+            "value": {
+                "amount": "33.46",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H70MJ2C9D68PL8C1G78O30EHG60N30C1GFGMJ2CPI6SO34E9O6KS7S",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2018-11-23T00:00:00.000000",
+            "type": {
+                "code": "MELS",
+                "description": "Investment"
+            },
+            "value": {
+                "amount": "3.20",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H70MJ2C9D60RL8C1G78O30EHG60N30C1GFGMJ8CHM68O36C1O6PV0",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2018-11-07T00:00:00.000000",
+            "type": {
+                "code": "FERE",
+                "description": "Bonus Payment"
+            },
+            "value": {
+                "amount": "0.09",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H70MJ2C9D60P58C1G78O30EHG60N30C1GFGMJ8C9M6CO34CHP6TV0",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2018-11-02T00:00:00.000000",
+            "type": {
+                "code": "MELS",
+                "description": "Investment"
+            },
+            "value": {
+                "amount": "2.00",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H70MJ2C9D60P58C1G78O30EHG60N30C1GFGOJCD9O6KS3EDHJ6HV0",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2018-11-02T00:00:00.000000",
+            "type": {
+                "code": "MELS",
+                "description": "Investment"
+            },
+            "value": {
+                "amount": "8.07",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H70MJ2C9D60OL8C1G78O30EHG60N30C1GFGQ32D9J64R38DPIFO",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2018-11-01T00:00:00.000000",
+            "type": {
+                "code": "MELS",
+                "description": "Investment"
+            },
+            "value": {
+                "amount": "0.01",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H70MJ2C9D60OL8C1G78O30EHG60N30C1GFGOJ8D1H6OPJAC1K75V0",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2018-11-01T00:00:00.000000",
+            "type": {
+                "code": "MELS",
+                "description": "Investment"
+            },
+            "value": {
+                "amount": "0.05",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H70MJ2C9D60OL8C1G78O30EHG60N30C1GFGMJ2D9P68RJ8D9P6DV0",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2018-11-01T00:00:00.000000",
+            "type": {
+                "code": "MELS",
+                "description": "Investment"
+            },
+            "value": {
+                "amount": "0.07",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H70MJ2C9D60OL8C1G78O30EHG60N30C1GFGMJ2D9M60R3EC9P6GQNS",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2018-11-01T00:00:00.000000",
+            "type": {
+                "code": "MELS",
+                "description": "Investment"
+            },
+            "value": {
+                "amount": "16.55",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H70MJ2C1D64R58C1G78O30EHG60N30C1GFGMJ4C1K68PJ8D1O60P7S",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2018-10-16T00:00:00.000000",
+            "type": {
+                "code": "MELS",
+                "description": "Investment"
+            },
+            "value": {
+                "amount": "23.84",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H70MJ2C1D64P58C1G78O30EHG60N30C1GFGOJ2E1O70PJEE9P6LV0",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2018-10-12T00:00:00.000000",
+            "type": {
+                "code": "MELS",
+                "description": "Investment"
+            },
+            "value": {
+                "amount": "62.00",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H70MJ2C1D60Q58C1G78O30EHG60N30C1GFGPJ2CHG70PJ6DPGFO",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2018-10-04T00:00:00.000000",
+            "type": {
+                "code": "FERE",
+                "description": "Bonus Payment"
+            },
+            "value": {
+                "amount": "0.09",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H70MJ0E9D60RL8C1G78O30EHG60N30C1GFGMJ2D9G60Q30E1O6KSNS",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2018-09-07T00:00:00.000000",
+            "type": {
+                "code": "FERE",
+                "description": "Bonus Payment"
+            },
+            "value": {
+                "amount": "0.09",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H70MJ0E1D60SL8C1G78O30EHG60N30C1GFGQ38CHG64OJACHJFO",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2018-08-09T00:00:00.000000",
+            "type": {
+                "code": "MELS",
+                "description": "Investment"
+            },
+            "value": {
+                "amount": "7.75",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H70MJ0E1D60RL8C1G78O30EHG60N30C1GFGMJ4C1H60Q30DPG68P7S",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2018-08-07T00:00:00.000000",
+            "type": {
+                "code": "FERE",
+                "description": "Bonus Payment"
+            },
+            "value": {
+                "amount": "0.09",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H70MJ0DPD64P58C1G78O30EHG60N30C1GFGOJ4E1O70QJ6DPJ6TV0",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2018-07-12T00:00:00.000000",
+            "type": {
+                "code": "MELS",
+                "description": "Investment"
+            },
+            "value": {
+                "amount": "10.00",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H70MJ0DPD60R58C1G78O30EHG60N30C1GFGOJ2C9O68SJGD9G61V0",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2018-07-06T00:00:00.000000",
+            "type": {
+                "code": "FERE",
+                "description": "Bonus Payment"
+            },
+            "value": {
+                "amount": "0.07",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H70MJ0DHD68S58C1G78O30EHG60N30C1GFGOJECPP70P3IE9K75V0",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2018-06-28T00:00:00.000000",
+            "type": {
+                "code": "MELS",
+                "description": "Investment"
+            },
+            "value": {
+                "amount": "10.00",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H70MJ0DHD64Q58C1G78O30EHG60N30C1GFGR3ACPP6GOJ4E1PFO",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2018-06-14T00:00:00.000000",
+            "type": {
+                "code": "MELS",
+                "description": "Investment"
+            },
+            "value": {
+                "amount": "10.00",
+                "currency": "NZD"
+            }
+        },
+        {
+            "id": "8CO30C1G68OJ4CHJ60OJ8D9L6GPJ0E9OBT9J4C1H70MJ0DHD60R58C1G78O30EHG60N30C1GFGS3GCPM6SQJ4CHLFO",
+            "otherAccount": {
+                "details": {
+                    "code": "",
+                    "particulars": "",
+                    "reference": ""
+                },
+                "holder": {}
+            },
+            "status": {
+                "code": "POSTED"
+            },
+            "thisAccount": {
+                "accountHash": "account-id-1",
+                "details": {
+                    "particulars": "Growth Fund"
+                }
+            },
+            "timestamp": "2018-06-06T00:00:00.000000",
+            "type": {
+                "code": "MELS",
+                "description": "Investment"
+            },
+            "value": {
+                "amount": "1000.00",
+                "currency": "NZD"
+            }
+        }
+    ]
+}
