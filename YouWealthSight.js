@@ -22,7 +22,6 @@ let apiKey
  * Any mis-invocation reported to console and program exits.
  */
 function start () {
-  var args
   console.log('YouWealthSight ', PackageJSON.version)
   argv.version(PackageJSON.version)
   argv.option({
@@ -53,7 +52,7 @@ function start () {
     description: 'BNZ API Key',
     example: "'YouWealthSight --api_key=FOO' or 'YouWealthSight -k BAR'"
   })
-  args = argv.run()
+  let args = argv.run()
   if (Object.getOwnPropertyNames(args.options).length === 0) {
     console.log('No command line options supplied.')
     process.exit(1)
