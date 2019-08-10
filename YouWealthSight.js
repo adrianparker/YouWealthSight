@@ -161,7 +161,9 @@ function getSharesightAccessToken () {
  * @param accessToken from connected Sharesight account
  */
 function createTradesInSharesight (accessToken) {
-  // TODO
+  trades.forEach(element => {
+    console.log(element.transaction_date, element.symbol)
+  })
 }
 
 /**
