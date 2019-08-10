@@ -18,6 +18,7 @@ the values to use within your Account settings in Sharesight.
 Ensure you have node installed. (v10.16.0 is the version app is developed against, but anything modern should be fine). Clone the repo to a local directory. Change into that directory. Use npm to install the application.
 
 ```
+git clone https://github.com/adrianparker/YouWealthSight.git
 cd YouWealthSight
 npm install
 ```
