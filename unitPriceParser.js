@@ -1,4 +1,4 @@
-var RestClient = require('node-rest-client').Client
+const RestClient = require('node-rest-client').Client
 
 /*
 Inception: as at 2018-05-21
@@ -18,23 +18,22 @@ Fund BNZ2112011 : BUY 1.001100 : SELL 0.999000
  * @return {object} containing YouWealth fund prices, keyed by the relevant YouWealth fund code
  */
 exports.getPricesForDate = function (apiKey, date, callback, err) {
-  var youwealthFunds = {}
+  let youwealthFunds = {}
   if (apiKey && apiKey.length > 0) {
     if (date && !isNaN(Date.parse(new Date(date)))) {
-      var pricesAtDate = new Date(date).toISOString().split('T')[0]
-      var client = new RestClient()
-      var args = {
+      const pricesAtDate = new Date(date).toISOString().split('T')[0]
+      const client = new RestClient()
+      const args = {
         path: { 'yyyy-mm-dd': pricesAtDate },
         headers: { 'ApiKey': apiKey }
       }
       // eslint-disable-next-line no-unused-vars
       // eslint-disable-next-line no-template-curly-in-string
       client.get('https://api.bnz.co.nz/v1/fundunitprices?date=${yyyy-mm-dd}&fundProduct=retailManagedFund', args, function (data, response) {
-        var fundUnitPrices = JSON.parse(data)
+        const fundUnitPrices = JSON.parse(data)
         if (fundUnitPrices && fundUnitPrices.fundUnitPrices) {
-          for (var i = 0; i < fundUnitPrices.fundUnitPrices.length; i++) {
-            var thisFund = fundUnitPrices.fundUnitPrices[i]
-            youwealthFunds[thisFund.fundCode] = thisFund
+          for (let i = 0; i < fundUnitPrices.fundUnitPrices.length; i++) {
+            youwealthFunds[fundUnitPrices.fundUnitPrices[i].fundCode] = fundUnitPrices.fundUnitPrices[i]
           }
         }
         callback(youwealthFunds)
