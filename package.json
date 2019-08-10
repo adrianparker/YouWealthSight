@@ -15,7 +15,8 @@
     "argv": "0.0.2",
     "lodash": "^4.17.15",
     "node-rest-client": "^3.1.0",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "simple-oauth2": "^2.2.1"
   },
   "bugs": {
     "url": "https://github.com/adrianparker/YouWealthSight/issues"

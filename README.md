@@ -7,6 +7,13 @@ Work in progress. As at July 2019 all this program does is retrieve the latest Y
 ## BNZ API Key
 You will need your own BNZ Fund Unit Prices API Key to use this application. As at July 2019, I use the API Key that BNZ make available in the public source of their website. (Visit https://www.bnz.co.nz and view source)
 
+## BNZ YouWealth Account ID
+TODO
+
+## Sharesight Client ID and Client Secret
+You will need to ask Sharesight to grant you API access. When they do so, they'll provide
+the values to use within your Account settings in Sharesight. 
+
 ## Installation
 Ensure you have node installed. (v10.16.0 is the version app is developed against, but anything modern should be fine). Clone the repo to a local directory. Change into that directory. Use npm to install the application.
 
@@ -22,15 +29,13 @@ The first is a simple 'what are the latest prices' check.  For this you just nee
 For example:
 
 ```
-./YouWealthSight.js -k APIKEY
+./YouWealthSight.js -k BNZ_APIKEY
 ```
 The second (work in progress, not yet functional) will record your BNZ YouWealth account transactions in Sharesight.  For this you will need to supply the BNZ API key to use, as well as your BNZ YouWealth account and Sharesight account details.
 For example:
 
 ```
-cd YouWealthSight
-npm install
-./YouWealthSight.js -k APIKEY -a ACCOUNT_ID -c CLIENT_ID
+./YouWealthSight.js -k BNZ_APIKEY -a YOUWEALTH_ACCOUNT_ID -c SHARESIGHT_CLIENT_ID -s SHARESIGHT_CLIENT_SECRET
 ```
 
 ## Tests

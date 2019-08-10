@@ -3,29 +3,39 @@
 /**
  * Maintain BNZ YouWealth managed fund transactions in a Sharesight portfolio.
  */
-
-var argv = require('argv')
-var TransactionFetcher = require('./transactionFetcher')
-var TransactionParser = require('./transactionParser')
-var UnitPriceFetcher = require('./unitPriceFetcher')
-var UnitPriceParser = require('./unitPriceParser')
-
+const argv = require('argv')
+const TransactionFetcher = require('./transactionFetcher')
+const TransactionParser = require('./transactionParser')
+const UnitPriceFetcher = require('./unitPriceFetcher')
+const UnitPriceParser = require('./unitPriceParser')
+const PackageJSON = require('./package.json')
 var postedTransactions
 var clientId
+var clientSecret
 var accountId
 var apiKey
 
+/**
+ * Examines command line arguments provided and if valid, executes the application accordingly.
+ * Any mis-invocation reported to console and program exits.
+ */
 function start () {
-  var pjson = require('./package.json')
   var args
-  console.log('YouWealthSight v ' + pjson.version)
-  argv.version(pjson.version)
+  console.log('YouWealthSight ', PackageJSON.version)
+  argv.version(PackageJSON.version)
   argv.option({
     name: 'client_id',
     short: 'c',
     type: 'string',
     description: 'ShareSight Client ID',
     example: "'YouWealthSight --client_id=FOO' or 'YouWealthSight -c BAR'"
+  })
+  argv.option({
+    name: 'client_secret',
+    short: 's',
+    type: 'string',
+    description: 'ShareSight Client Secret',
+    example: "'YouWealthSight --client_secret=FOO' or 'YouWealthSight -s BAR'"
   })
   argv.option({
     name: 'account_id',
@@ -48,74 +58,106 @@ function start () {
   } else if (Object.getOwnPropertyNames(args.options).length === 1 && args.options.api_key !== null) {
     apiKey = args.options.api_key
     fetchLatestYouWealthPrices()
-  } else if ((Object.getOwnPropertyNames(args.options).length !== 3) ||
+  } else if ((Object.getOwnPropertyNames(args.options).length !== 4) ||
     (args.options.client_id === null) ||
+    (args.options.client_secret === null) ||
     (args.options.api_key === null) ||
     (args.options.account_id === null)) {
-    console.log('Please provide all command line options, or none for latest prices.')
+    console.log('Please provide all command line options, or --api_key only for latest prices.')
     argv.help()
     process.exit(1)
   } else {
     clientId = args.options.client_id
+    clientSecret = args.options.client_secret
     apiKey = args.options.api_key
     accountId = args.options.account_id
-    updateShareSight(accountId, clientId, apiKey)
+    retrieveYouWealthTransactions()
   }
 }
 
-function updateShareSight (youWealthAccountId, clientId, apiKey) {
+/**
+ * Retrieve YouWealth account transactions from BNZ,
+ * then get unit prices for unique transaction dates,
+ * finally invoking processTransactionsIntoSharesight.
+ */
+function retrieveYouWealthTransactions () {
   // get transactions from BNZ for youWealthAccountId
-  console.log('Retrieving transactions for YouWealth account ID: ' + youWealthAccountId)
-  var transactions = TransactionFetcher.getTransactions(youWealthAccountId)
+  console.log('Retrieving transactions for YouWealth account ID', accountId)
+  const transactions = TransactionFetcher.getTransactions(accountId)
   postedTransactions = TransactionParser.getPostedTransactions(transactions)
-  console.log('Got posted transaction count: ' + postedTransactions.length)
+  console.log('Posted transaction count', postedTransactions.length)
   if (postedTransactions.length > 0) {
     // for each transaction, get unit prices for its transaction date
-    var postedDates = []
+    let postedDates = []
     postedTransactions.forEach(element => {
-      var thisPostedTransactionDate = TransactionParser.getTransactionDate(element)
+      let thisPostedTransactionDate = TransactionParser.getTransactionDate(element)
       if (postedDates.indexOf(thisPostedTransactionDate) < 0) {
         postedDates.push(thisPostedTransactionDate)
       }
     })
-    console.log('Unit prices required for date count: ' + postedDates.length)
+    console.log('Unit prices unique dates', postedDates.length)
     UnitPriceFetcher.getUnitPricesForDates(apiKey, postedDates, processTransactionsIntoSharesight)
   }
 }
 
+/**
+ * Creates trades in Sharesight for each of the YouWealth transactions.
+ * @param {Object} unitPrices contains unit prices for date under key YYYY-MM-DD
+ */
 function processTransactionsIntoSharesight (unitPrices) {
   if (unitPrices && Object.keys(unitPrices).length > 0) {
-    console.log('Unit prices returned: ' + Object.keys(unitPrices).length)
-    console.log('Processing for ShareSight client ID: ' + clientId)
     // create a trade for each transaction
-    var trades = []
+    const trades = []
     postedTransactions.forEach(element => {
       trades.push({
         'unique_identifier': TransactionParser.getTransactionId(element),
-        'transaction_type': TransactionParser.getSharesightTransactionType(element),
+        // 'transaction_type': TransactionParser.getSharesightTransactionType(element),
         'transaction_date': TransactionParser.getTransactionDate(element),
         'symbol': TransactionParser.getFundCodeFor(TransactionParser.getTransactionFund(element)),
         'market': 'OTHER',
-        'quantity': TransactionParser.getUnits(element),
-        'price': TransactionParser.getUnitPrice(element, unitPrices),
+        // 'quantity': TransactionParser.getUnits(element),
+        // 'price': TransactionParser.getUnitPrice(element, unitPrices),
         'brokerage': 0.0,
         'comments': 'Generated by YouWealthSight'
       })
     })
-    console.log('Processed trade count ' + trades.length)
-    // connect to Sharesight via Connect API
-    // create trades
+    // connect to Sharesight
+    try {
+      const credentials = {
+        client: {
+          id: clientId,
+          secret: clientSecret
+        },
+        auth: {
+          tokenHost: 'https://api.sharesight.com',
+          tokenPath: '/oauth2/token'
+        }
+      }
+      // Initialize the OAuth2 Library
+      const oauth2 = require('simple-oauth2').create(credentials)
+      oauth2.clientCredentials.getToken().then(function (value) {
+        const accessToken = oauth2.accessToken.create(value)
+        console.log('Connected to Sharesight', accessToken.token)
+        // TODO create trades in Sharesight
+      }, function (reason) {
+        console.log('Error getting access token from Sharesight', reason)
+      })
+    } catch (error) {
+      console.error('Error connecting to Sharesight', error.message)
+    }
   } else {
-    console.log('Cannot process transactions, no unit prices available')
+    console.error('Cannot process transactions, no unit prices available')
     process.exit(1)
   }
 }
 
+/**
+ * Retrieves YouWealth unit prices for today and prints them to console.
+ */
 function fetchLatestYouWealthPrices () {
-  console.log('Fetching latest YouWealth prices:')
   UnitPriceParser.getPricesForDate(apiKey, Date.now(), function (prices) {
     Object.keys(prices).forEach(function (key, index) {
-      var price = prices[key]
+      let price = prices[key]
       console.log(key + ' ' + String(price.fundName).padEnd(24, ' ') + ' as at ' + price.date + ' : BUY ' + price.buyPrice.amount + ' : SELL ' + price.sellPrice.amount)
     })
   })
