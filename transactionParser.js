@@ -51,3 +51,22 @@ exports.getFundCodeFor = function (fundDescription) {
 exports.getTransactionAmount = function (transaction) {
   return transaction.value.amount
 }
+/**
+ * Sharesight supported transaction types:
+ * "BUY", "SELL", "SPLIT", "BONUS", "CONSOLD", "CANCEL", "CAPITAL_RETURN", "OPENING_BALANCE", "ADJUST_COST_BASE"
+ */
+exports.getSharesightTransactionType = function (transaction) {
+  if (transaction && transaction.type && transaction.type.code) {
+    switch (transaction.type.code) {
+      case 'FERE': // "Bonus Payment"
+        return 'BONUS'
+      case 'MELS': // "Investment"
+        return 'BUY'
+      case 'PIET': // "PIE Tax"
+        return 'SELL'
+      default:
+        throw new Error('Unknown YouWealth transaction code', transaction.type.code)
+    }
+  }
+  throw new Error('Transaction does not carry type code', transaction)
+}

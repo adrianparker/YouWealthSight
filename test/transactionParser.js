@@ -87,4 +87,26 @@ describe('TransactionParser', function () {
       assert.strictEqual('BNZ2112011', TransactionParser.getFundCodeFor('Income Fund'))
     })
   })
+  describe('#getSharesightTransactionType', function () {
+    it('should return BONUS for FERE', function () {
+      var bonusTransaction = { type: { code: 'FERE' } }
+      assert.strictEqual('BONUS', TransactionParser.getSharesightTransactionType(bonusTransaction))
+    })
+    it('should return BUY for MELS', function () {
+      var buyTransaction = { type: { code: 'MELS' } }
+      assert.strictEqual('BUY', TransactionParser.getSharesightTransactionType(buyTransaction))
+    })
+    it('should return SELL for PIET', function () {
+      var sellTransaction = { type: { code: 'PIET' } }
+      assert.strictEqual('SELL', TransactionParser.getSharesightTransactionType(sellTransaction))
+    })
+    it('should throw an error for input with no type code', function () {
+      var badTransaction = { type: { notcode: 'PIET' } }
+      assert.throws(() => TransactionParser.getSharesightTransactionType(badTransaction))
+    })
+    it('should throw an error for input with unknown type code', function () {
+      var badTransactionCode = { type: { code: 'BOOM' } }
+      assert.throws(() => TransactionParser.getSharesightTransactionType(badTransactionCode))
+    })
+  })
 })

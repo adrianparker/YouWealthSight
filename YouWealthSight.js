@@ -110,7 +110,7 @@ function processTransactionsIntoSharesight (unitPrices) {
     postedTransactions.forEach(element => {
       trades.push({
         'unique_identifier': TransactionParser.getTransactionId(element),
-        // 'transaction_type': TransactionParser.getSharesightTransactionType(element),
+        'transaction_type': TransactionParser.getSharesightTransactionType(element),
         'transaction_date': TransactionParser.getTransactionDate(element),
         'symbol': TransactionParser.getFundCodeFor(TransactionParser.getTransactionFund(element)),
         'market': 'OTHER',
