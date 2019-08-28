@@ -161,7 +161,11 @@ function getSharesightAccessToken (callback) {
  * @param accessToken from connected Sharesight account
  */
 function createTradesInSharesight (accessToken) {
-  Sharesight.getPortfolios(accessToken)
+  Sharesight.getPortfolioForName('Jo & Adrian', accessToken, addTradesToPortfolio)
+}
+
+function addTradesToPortfolio (portfolio) {
+  console.log('Adding trades to portfolio', portfolio.id)
   trades.forEach(element => {
     console.log(element.transaction_date, element.symbol)
   })
